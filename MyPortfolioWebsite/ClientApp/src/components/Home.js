@@ -7,22 +7,26 @@ import logo from '../images/globalsecurity.png';
 import logo1 from '../images/lernia.png';
 import Cards from './Cards';
 import './Cards.css';
-import { ContactUs} from './ContactUs.js'
+import { ContactUs } from './ContactUs.js';
+import ParticleBackground from "./ParticleBackground";
+
 
 
 export class Home extends Component {
   static displayName = Home.name;
-
+  
   render() {
     return (
-      <div>
+      
+        <div className='particles'><ParticleBackground />
+        <div>
 
         <Head></Head>
         <About></About>
         <h2>
-          Courses</h2>
+        Courses</h2>
         <Lists></Lists>
-
+        
         <div className="row">
           <div className="col-md-6">
             <img className="card-img-top" src={logo}/>
@@ -40,13 +44,8 @@ export class Home extends Component {
           </div>
         </div>
 
-        
-
-         <section class="py-5">
-               
-            <SocialFollow></SocialFollow>
-            
-
+        <section className="py-5">    
+          <SocialFollow></SocialFollow>
           <ContactUs></ContactUs>
 
                     <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
@@ -73,8 +72,13 @@ export class Home extends Component {
                     </div>
                 
         </section>
-
-      </div>
+        </div>
+        </div >
     );
   }
+
+  
+      
+
+  
 }
