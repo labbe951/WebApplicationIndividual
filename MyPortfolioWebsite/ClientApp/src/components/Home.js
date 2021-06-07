@@ -14,8 +14,32 @@ import ParticleBackground from "./ParticleBackground";
 
 export class Home extends Component {
   static displayName = Home.name;
+
+  numberOfRepos = 0;
+
+  constructor() {
+    super();
+    this.state = {
+      numberOfRepos: 0
+    }
+
+  }
+
+  componentDidMount() {
+    fetch('https://api.github.com/users/labbe951/repos')
+      .then(response => response.json())
+      .then(json => {
+        this.setState({
+          numberOfRepos: json.length
+        })
+      });
+    }
   
-  render() {
+
+  
+
+render()
+{
     return (
       
         <div className='particles'><ParticleBackground />
@@ -23,8 +47,7 @@ export class Home extends Component {
 
         <Head></Head>
         <About></About>
-        <h2>
-        Courses</h2>
+        <h2>Courses</h2>
         <Lists></Lists>
         
         <div className="row">
@@ -44,25 +67,27 @@ export class Home extends Component {
           </div>
         </div>
 
-        <section className="py-5">    
+           <section className="py-5">    
           <SocialFollow></SocialFollow>
           <ContactUs></ContactUs>
 
                     <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
                         <div class="col">
                           <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
-                          <div class="h5 mb-2">Chat with us</div>
-                          <p class="text-muted mb-0">Chat live with one of our support specialists.</p>
+                          <div class="h5 mb-2">Chat with me</div>
+                          <p class="text-muted mb-0">If you don't want to send a mail just hit me up on Facebook or Instagram.</p>
                         </div>
                         <div class="col">
                           <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
-                          <div class="h5">Ask the community</div>
-                          <p class="text-muted mb-0">Explore our community forums and communicate with other users.</p>
+                          <div class="h5">General message</div>
+                <p class="text-muted mb-0">"God's Final Message to His Creation:
+                                            'We apologize for the inconvenience."
+                                           - Douglas Adams.</p>
                         </div>
                         <div class="col">
                           <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
-                          <div class="h5">Support center</div>
-                          <p class="text-muted mb-0">Browse FAQ's and support articles to find solutions.</p>
+                          <div class="h5">Live github update</div>
+                <p class="text-muted mb-0">Number of repos in my github right now: {this.state.numberOfRepos }</p>
                         </div>
                         <div class="col">
                             <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
@@ -71,14 +96,17 @@ export class Home extends Component {
                         </div>
                     </div>
                 
-        </section>
-        </div>
+           </section>
+          </div>
         </div >
     );
-  }
+ }
+}
+
+
 
   
       
 
   
-}
+
