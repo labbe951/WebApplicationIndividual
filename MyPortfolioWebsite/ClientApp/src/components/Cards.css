@@ -9,12 +9,11 @@
 }
 
 .card-text {
-    text-align: center;
+    text-align: left;
 }
 
 .card-img, .card-img-top, .card-img-bottom {
     flex-shrink: 0;
     width: 50%;
-
 }
 

@@ -9,14 +9,17 @@ export default class SocialFollow extends Component {
       <div class="social-container">
         <h3>Social Follow</h3>
         <a href="https://www.facebook.com/pontus.p.haglund"
+          target="_blank"
           className="facebook social">
           <FontAwesomeIcon icon={faFacebook} size="2x" />
         </a>
         <a href="https://www.instagram.com/pittbrad69/"
+          target="_blank"
           className="instagram social">
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </a>
         <a href="https://github.com/labbe951"
+          target="_blank"
           className="github social">
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>

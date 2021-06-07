@@ -25,7 +25,7 @@ export class NavMenu extends Component {
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container px-5">
-            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <a class="navbar-brand" href="#MyProfile">My Profile</a>
           </div>
         </nav>
       </header>

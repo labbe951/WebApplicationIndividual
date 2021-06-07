@@ -52,8 +52,8 @@ render()
         
         <div className="row">
           <div className="col-md-6">
-            <img className="card-img-top" src={logo}/>
-            <Cards infoText="In my previous job as a bouncer I worked in bars, hotels and events. 
+              <img className="card-img-top" src={logo}/>
+            <Cards infoText ="In my previous job as a bouncer I worked in bars, hotels and events. 
                               This meant that you got to meet with all kinds of different people, which has meant that
                               I have developed a great deal of social competence and understand the importance of being service-oriented."></Cards>
           </div>
