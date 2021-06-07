@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './NavMenu.css';
 
 export class NavMenu extends Component {
