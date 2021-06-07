@@ -47,14 +47,14 @@ render()
 
         <Head></Head>
         <About></About>
-        <h2>Courses</h2>
+          <h3>System developer, Object-oriented system development, Handelsakademin / NBI, Gothenburg<p></p> Courses:</h3>
         <Lists></Lists>
         
         <div className="row">
           <div className="col-md-6">
             <img className="card-img-top" src={logo}/>
-            <Cards infoText="In my previous job as a bouncer I worked bars, hotels and events. 
-                              This meant that you got in touch with all different kinds of people, which has meant that
+            <Cards infoText="In my previous job as a bouncer I worked in bars, hotels and events. 
+                              This meant that you got to meet with all kinds of different people, which has meant that
                               I have developed a great deal of social competence and understand the importance of being service-oriented."></Cards>
           </div>
 
